@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Fotografa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Imię i Nazwisko</h1>
+        <nav>
+            <ul>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">O mnie</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="portfolio">
+        <h2>Moje prace</h2>
+        <div class="gallery">
+            <img src="przyklad1.jpg" alt="Zdjęcie 1">
+            <img src="przyklad2.jpg" alt="Zdjęcie 2">
+            <img src="przyklad3.jpg" alt="Zdjęcie 3">
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>O mnie</h2>
+        <p>Cześć! Jestem fotografem specjalizującym się w...</p>
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <form>
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Wyślij</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Imię i Nazwisko</p>
+    </footer>
+</body>
+</html>
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery img {
+    max-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+// script.js
+document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Dziękujemy za wiadomość! Skontaktujemy się z Tobą wkrótce.");
+});
